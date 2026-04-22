@@ -1,14 +1,23 @@
 # Deep Learning Projects (PyTorch & TensorFlow)
 
-This repository contains implementations of deep learning models using TensorFlow and PyTorch, focusing on image processing and classification tasks.
+This repository contains implementations of deep learning models using TensorFlow and PyTorch, with a focus on image processing and classification tasks.
 
 ## Projects
 
-### MNIST Digit Classification (TensorFlow)
-- Built a neural network for handwritten digit recognition
-- Implemented data preprocessing and normalization
+### MNIST Digit Classification
+Implemented handwritten digit recognition in both TensorFlow and PyTorch.
+
+**TensorFlow version**
+- Data loading and normalization
+- Feedforward neural network using Keras
+- Model training, evaluation, and prediction
 - Achieved ~97% test accuracy
-- Includes model training, evaluation, and prediction
+
+**PyTorch version**
+- Data loading with torchvision and DataLoader
+- Feedforward neural network using `torch.nn`
+- Manual training and evaluation loop
+- Achieved 97.56% test accuracy
 
 ### Image Processing Pipeline
 - Image loading using PIL
@@ -22,5 +31,14 @@ This repository contains implementations of deep learning models using TensorFlo
 - PyTorch
 - NumPy
 - Matplotlib
+- torchvision
 
 ## Structure
+
+```text
+deep-learning-projects/
+├── src/
+├── data/
+├── requirements.txt
+├── README.md
+└── .gitignore
