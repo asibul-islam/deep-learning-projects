@@ -22,7 +22,7 @@ test_dataset = datasets.MNIST(root="../data", train=False, download=True, transf
 train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)
 
-# Show one image
+# one image
 index = 7412
 image, label = test_dataset[index]
 
@@ -112,7 +112,7 @@ with torch.no_grad():
 
 print(f"Test Accuracy: {100 * correct / total:.2f}%")
 
-# Predict one example
+# Predict one
 image, label = test_dataset[index]
 
 model.eval()
