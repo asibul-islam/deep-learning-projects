@@ -12,7 +12,7 @@ print("Test shape:", x_test.shape)
 x_train = x_train / 255.0
 x_test = x_test / 255.0
 
-index = 9999
+index = 1234
 
 # Show one test image
 plt.imshow(x_test[index], cmap='gray')
@@ -22,7 +22,8 @@ plt.show()
 
 # Build model
 model = keras.Sequential([
-    keras.layers.Flatten(input_shape=(28, 28)),
+    keras.Input(shape=(28, 28)),
+    keras.layers.Flatten(),
     keras.layers.Dense(128, activation='relu'),
     keras.layers.Dense(10, activation='softmax')
 ])

@@ -15,15 +15,15 @@ transform = transforms.Compose([
 ])
 
 # Datasets
-train_dataset = datasets.MNIST(root="./data", train=True, download=True, transform=transform)
-test_dataset = datasets.MNIST(root="./data", train=False, download=True, transform=transform)
+train_dataset = datasets.MNIST(root="../data", train=True, download=True, transform=transform)
+test_dataset = datasets.MNIST(root="../data", train=False, download=True, transform=transform)
 
 # DataLoaders
 train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)
 
-# Show one sample
-index = 9999
+# one sample
+index = 1122
 image, label = test_dataset[index]
 plt.imshow(image.squeeze(), cmap="gray")
 plt.title(f"Label: {label}")
@@ -87,7 +87,7 @@ with torch.no_grad():
 
 print(f"Test Accuracy: {100 * correct / total:.2f}%")
 
-# Predict one example
+# Predict one
 image, label = test_dataset[index]
 model.eval()
 with torch.no_grad():
