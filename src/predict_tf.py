@@ -1,16 +1,15 @@
-import numpy as np
 from tensorflow import keras
 import matplotlib.pyplot as plt
 
 val_dir = "../data/cats_dogs/val"
 
-model = keras.models.load_model("../models/cats_dogs_model.keras")
+model = keras.models.load_model("../models/cats_dogs_transfer_mobilenet.keras")
 
 class_names = ["cats", "dogs"]
 
 val_data = keras.utils.image_dataset_from_directory(
     val_dir,
-    image_size=(150, 150),
+    image_size=(160, 160),
     batch_size=32,
     label_mode="binary",
     shuffle=True
