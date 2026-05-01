@@ -33,6 +33,20 @@ Implemented handwritten digit recognition in both TensorFlow and PyTorch.
 - Matplotlib
 - torchvision
 
+## Model Evaluation
+
+- Accuracy: 98%
+- Precision/Recall: ~98–99%
+- Confusion Matrix included
+
+## Failure Analysis
+
+The model struggles with:
+- low-quality images
+- occluded animals
+- unusual poses
+
+
 ## Structure
 
 ```text
