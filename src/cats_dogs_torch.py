@@ -145,7 +145,7 @@ for epoch in range(epochs):
     )
 
 # Save model
-torch.save(model.state_dict(), "../models/cats_dogs_basic_cnn_torch.pth")
+torch.save(model.state_dict(), "../models/cats_dogs_model.pth")
 
 # Predict one example
 index = 10
